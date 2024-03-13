@@ -24,7 +24,7 @@ horario_comencial = hora_atual >= 8 and hora_atual <= 18
 
 if not bloqueado and maioridade and horario_comencial:
     print('liberado')
-else:
+else:´
     print('não liberado')
 
 # operadores de comparação
