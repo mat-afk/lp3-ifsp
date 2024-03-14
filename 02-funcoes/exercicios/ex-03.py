@@ -1,6 +1,8 @@
-valor_compra = float(input("Digite o valor da compra: "))
+valor_compra = 0.00
+while valor_compra <= 0.00:
+    valor_compra = float(input("Digite o valor da compra: "))
 
-def desconto(valor):
+def get_desconto(valor):
 
     if valor >= 500.0:
         return 0.15
@@ -11,5 +13,5 @@ def desconto(valor):
     
     return 0.0
 
-print(f"Valor final: {valor_compra - (valor_compra * desconto(valor_compra))}")
-print(f"Desconto aplicado: {int(desconto(valor_compra) * 100)}%")
+print(f"Valor final: R$ {valor_compra - (valor_compra * get_desconto(valor_compra))}")
+print(f"Desconto aplicado: {int(get_desconto(valor_compra) * 100)}%")

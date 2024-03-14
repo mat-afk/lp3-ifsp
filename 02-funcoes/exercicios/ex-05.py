@@ -1,6 +1,7 @@
 identificador = str(input("Digite seu identificador: "))
 
-def validar_identificador(identificador: str):
+def is_identificador_valid(identificador: str):
+
     if len(identificador) != 7:
         return False
     if not f"{identificador[0]}{identificador[1]}" == "BR":
@@ -9,8 +10,9 @@ def validar_identificador(identificador: str):
         return False 
     if not identificador[len(identificador) - 1] == "X":
         return False
+    
     return True
 
-situacao = "válido" if validar_identificador(identificador) else "inválido"
+valido = "válido" if is_identificador_valid(identificador) else "inválido"
 
-print(f"Seu identificador é {situacao}.")
+print(f"Seu identificador é {valido}.")
