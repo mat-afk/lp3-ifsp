@@ -2,6 +2,7 @@ frase = input("Digite uma frase para contar suas vogais e consoantes: ")
 
 vogais = ("a", "e", "i", "o", "u")
 outros = (".", ",", "/", "?", "!", "'", " ", "0", "1", "2", "3", "4", "6", "7", "8", "9")
+
 vogais_cont = 0
 consoantes_cont = 0
 
