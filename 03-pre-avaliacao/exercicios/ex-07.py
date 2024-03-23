@@ -17,9 +17,9 @@ palavras = (
 palavra_oculta = choice(palavras).lower()
 palpite = ["_" for _ in palavra_oculta]
 vidas = 3
+letras_tentadas = []
 
 while vidas > 0:
-    print()
     print(f"Você tem {vidas} vida(s)")
     print(" ".join(palpite))
 
@@ -27,10 +27,13 @@ while vidas > 0:
         print("Você acertou!")
         break
 
+    if letras_tentadas:
+        print(f"letras tentadas: {" ".join(letras_tentadas)}")
     letra_palpite = input("digite uma letra: ").lower()
 
     if letra_palpite not in palavra_oculta:
         vidas -= 1
+        letras_tentadas.append(letra_palpite)
         print("letra incorreta!")
     else:
         for i in range(len(palavra_oculta)):
