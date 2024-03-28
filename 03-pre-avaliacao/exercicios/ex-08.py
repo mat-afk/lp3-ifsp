@@ -7,10 +7,6 @@ def contar_palavras(frase: str):
     frase = frase.split(" ")
 
     for palavra in frase:
-        palavra = palavra.replace(",", "")
-        palavra = palavra.replace(".", "")
-
-        contagem_palavras[palavra] = 0
         contagem_palavras[palavra] = frase.count(palavra)
 
     return contagem_palavras
